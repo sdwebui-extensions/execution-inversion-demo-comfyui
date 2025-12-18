@@ -7,16 +7,6 @@ import comfy_execution.graph_utils
 from .tools import VariantSupport
 
 comfy_path = os.path.dirname(folder_paths.__file__)
-js_path = os.path.join(comfy_path, "web", "extensions")
-inversion_demo_path = os.path.dirname(__file__)
-
-def setup_js():
-    # setup js
-    js_dest_path = os.path.join(js_path, "inversion-demo-components")
-    if not os.path.exists(js_dest_path):
-        os.makedirs(js_dest_path)
-    js_src_path = os.path.join(inversion_demo_path, "js", "inversion-demo-components.js")
-    shutil.copy(js_src_path, js_dest_path)
 
 @VariantSupport()
 class ComponentInput:
